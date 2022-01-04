@@ -1,5 +1,6 @@
 using System;
 using System.IO;
+using Framework.Models;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -14,9 +15,8 @@ namespace RoyaleTests
         [SetUp]
         public void BeforeEach()
         {
-            driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"));  
-            //driver.Navigate().GoToUrl("https://statsroyale.com/guides/617c974c9716746b4669bd22");         
-           driver.Url = "https://statsroyale.com/";
+            driver = new ChromeDriver(Path.GetFullPath(@"../../../../" + "_drivers"));        
+            driver.Url = "https://statsroyale.com/";
             driver.Manage().Window.Maximize();
         }
 
@@ -74,20 +74,23 @@ namespace RoyaleTests
 
 
          [Test]
-        public void GolemCardDetails_Validation_TC2()
+        public void MirrorCardDetails_Validation_TC2()
         {
             new CardsPage(driver).Goto().GetCardByName("Golem").Click();
             var cardDetails = new CardDetailsPage(driver);
 
-            var (category, arena) = cardDetails.GetCardCategory();
-            var cardName = cardDetails.Map.CardName.Text;
-            var cardRarity = cardDetails.Map.CardRarity.Text;
+            // var (category, arena) = cardDetails.GetCardCategory();
+            // var cardName = cardDetails.Map.CardName.Text;
+            // var cardRarity = cardDetails.Map.CardRarity.Text;
 
-            Assert.AreEqual("Golem", cardName);
-            Assert.AreEqual("Troop", category);
-            Assert.AreEqual("Arena 10", arena);
-            Assert.AreEqual("Epic", cardRarity);
+            var Card = cardDetails.GetBaseCard();
+            var Golem = new GolemCard();
 
-    }
+            Assert.AreEqual(Golem.Name, Card.Name);
+            Assert.AreEqual(Golem.Type, Card.Type);
+            Assert.AreEqual(Golem.Arena, Card.Arena);
+            Assert.AreEqual(Golem.Rarity, Card.Rarity);
+
+       }
 }
 }

@@ -1,4 +1,6 @@
 using System;
+using System.Linq;
+using Framework.Models;
 using OpenQA.Selenium;
 
 namespace Royale.Pages
@@ -20,6 +22,21 @@ namespace Royale.Pages
 
               }
 
+              public Card GetBaseCard()
+              {
+                 var (category, arena) = GetCardCategory();
+
+                 return new Card
+                 { 
+                        Name = Map.CardName.Text,
+                        Rarity = Map.CardRarity.Text.Split('\n').Last(),
+                        Type = category,
+                        Arena = arena
+
+                 };
+
+              }
+
        }
 
        public class CardDetailsPageMap 
@@ -35,8 +52,8 @@ namespace Royale.Pages
 
             public IWebElement CardCategory => _driver.FindElement(By.CssSelector(".card__rarity"));
 
-           // public IWebElement CardRarity => _driver.FindElement(By.CssSelector(".card__common"));
-             public IWebElement CardRarity => _driver.FindElement(By.CssSelector(".card__epic"));
+            public IWebElement CardRarity => _driver.FindElement(By.CssSelector(".card__epic"));
+            
 
            
        }
