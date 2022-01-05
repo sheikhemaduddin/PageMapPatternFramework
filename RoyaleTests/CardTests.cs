@@ -1,6 +1,7 @@
 using System;
 using System.IO;
 using Framework.Models;
+using Framework.Services;
 using NUnit.Framework;
 using OpenQA.Selenium;
 using OpenQA.Selenium.Chrome;
@@ -73,24 +74,32 @@ namespace RoyaleTests
         }
 
 
-         [Test]
-        public void MirrorCardDetails_Validation_TC2()
+         [Test, Category("cards")]
+         [TestCase("Golem")]
+        public void CardDetails_Validation_TC2(string cardName)
         {
-            new CardsPage(driver).Goto().GetCardByName("Golem").Click();
+            new CardsPage(driver).Goto().GetCardByName(cardName).Click();
             var cardDetails = new CardDetailsPage(driver);
+
+            var CardOnPage = cardDetails.GetBaseCard();
+            var card = new InMemoryCardService().GetCardByName(cardName);
+
+            Assert.AreEqual(card.Name, CardOnPage.Name);
+            Assert.AreEqual(card.Type, CardOnPage.Type);
+            Assert.AreEqual(card.Arena, CardOnPage.Arena);
+            Assert.AreEqual(card.Rarity, CardOnPage.Rarity);
 
             // var (category, arena) = cardDetails.GetCardCategory();
             // var cardName = cardDetails.Map.CardName.Text;
             // var cardRarity = cardDetails.Map.CardRarity.Text;
 
-            var Card = cardDetails.GetBaseCard();
-            var Golem = new GolemCard();
+            // var Card = cardDetails.GetBaseCard();
+            // var Golem = new GolemCard();
 
-            Assert.AreEqual(Golem.Name, Card.Name);
-            Assert.AreEqual(Golem.Type, Card.Type);
-            Assert.AreEqual(Golem.Arena, Card.Arena);
-            Assert.AreEqual(Golem.Rarity, Card.Rarity);
+            // var CardOnPage = cardDetails.GetBaseCard();
+            // var card = new InMemoryCardService().GetCardByName("Golem");
 
+            
        }
 }
 }
