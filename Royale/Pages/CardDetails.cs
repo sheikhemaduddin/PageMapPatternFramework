@@ -29,7 +29,7 @@ namespace Royale.Pages
                  return new Card
                  { 
                         Name = Map.CardName.Text,
-                        Rarity = Map.CardRarity.Text.Split('\n').Last(),
+                        Epic = Map.CardEpic.Text.Split('\n').Last(),
                         Type = category,
                         Arena = arena
 
@@ -52,7 +52,7 @@ namespace Royale.Pages
 
             public IWebElement CardCategory => _driver.FindElement(By.CssSelector(".card__rarity"));
 
-            public IWebElement CardRarity => _driver.FindElement(By.CssSelector(".card__epic"));
+            public IWebElement CardEpic => _driver.FindElement(By.CssSelector(".card__epic"));
             
 
            
