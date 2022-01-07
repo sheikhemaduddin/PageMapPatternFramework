@@ -16,8 +16,9 @@ namespace RoyaleTests
         [SetUp]
         public void BeforeEach()
         {
-            Driver.Init();   
-            Driver.Current.Url = "https://statsroyale.com/";
+            Driver.Init();
+            pages.Init();
+            Driver.Goto("https://statsroyale.com/");
             Driver.Current.Manage().Window.Maximize();
         }
 
@@ -31,8 +32,7 @@ namespace RoyaleTests
         public void Golem_Card_Validation()
         {
             //goto stats Royale
-            var cardsPage = new CardsPage(Driver.Current);
-            var Golem = cardsPage.Goto().GetCardByName("Golem");
+            var Golem = pages.Cards.Goto().GetCardByName("Golem");
             Assert.That(Golem.Displayed);
              
         }
@@ -79,15 +79,12 @@ namespace RoyaleTests
          [Test, Category("cards")]
          //[TestCase("Golem")]
          [TestCaseSource("cardNames")]
-         //[Parallelizable(ParallelScope.Children)]
+         [Parallelizable(ParallelScope.Children)]
         public void CardDetails_Validation_TC2(string cardName)
         {
-            new CardsPage(Driver.Current).Goto().GetCardByName(cardName).Click();
-            var cardDetails = new CardDetailsPage(Driver.Current);
-
-            var CardOnPage = cardDetails.GetBaseCard();
+            pages.Cards.Goto().GetCardByName(cardName).Click();
+            var CardOnPage = pages.CardDetails.GetBaseCard();
             var card = new InMemoryCardService().GetCardByName(cardName);
-
             Assert.AreEqual(card.Name, CardOnPage.Name);
             Assert.AreEqual(card.Type, CardOnPage.Type);
             Assert.AreEqual(card.Arena, CardOnPage.Arena);

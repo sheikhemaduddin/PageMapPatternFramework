@@ -1,4 +1,5 @@
 ﻿using System;
+using Framework.Selenium;
 using OpenQA.Selenium;
 
 namespace Royale.Pages
@@ -7,9 +8,9 @@ namespace Royale.Pages
     {
         public readonly HeaderNavMap Map;
 
-        public HeaderNav(IWebDriver driver)
+        public HeaderNav()
         {
-            Map = new HeaderNavMap(driver);
+            Map = new HeaderNavMap();
         }
         public void GoToCardsPage()
         {
@@ -20,14 +21,8 @@ namespace Royale.Pages
 
     public class HeaderNavMap
     {
-        IWebDriver _driver;
 
-        public HeaderNavMap(IWebDriver driver)
-        {
-            _driver = driver;
-        }
-
-        public IWebElement CardsTabLink => _driver.FindElement(By.CssSelector("a[href*= '/cards']"));
+        public IWebElement CardsTabLink => Driver.FindElement(By.CssSelector("a[href*= '/cards']"));
         
     }
 }
