@@ -7,11 +7,13 @@ namespace Framework.Models
     { 
        #region  
        //Page Properties
-       public virtual string Name { get; set; } = "Mirror";
+       public virtual string ID { get; set; }
+       public virtual string Name { get; set; }
+       public virtual string Icon { get; set; }
        public virtual int cost { get; set; } = 1;
-       public virtual string Epic { get; set; } = "Epic"; 
-       public virtual string Type { get; set; } = "Spell";
-       public virtual string Arena { get; set; } = "Arena 12";
+       public virtual string Rarity { get; set; } 
+       public virtual string Type { get; set; } 
+       public virtual string Arena { get; set; } 
        #endregion 
       
 

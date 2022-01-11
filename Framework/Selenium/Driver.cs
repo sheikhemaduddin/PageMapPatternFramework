@@ -23,7 +23,7 @@ namespace Framework.Selenium
          {
             if(!url.StartsWith("http"))
             {
-                url = $"htt[://{url}";
+                url = $"http[://{url}";
             }
 
             Debug.WriteLine(url);

@@ -88,7 +88,7 @@ namespace RoyaleTests
             Assert.AreEqual(card.Name, CardOnPage.Name);
             Assert.AreEqual(card.Type, CardOnPage.Type);
             Assert.AreEqual(card.Arena, CardOnPage.Arena);
-            Assert.AreEqual(card.Epic, CardOnPage.Epic);
+            Assert.AreEqual(card.Rarity, CardOnPage.Rarity);
 
             // var (category, arena) = cardDetails.GetCardCategory();
             // var cardName = cardDetails.Map.CardName.Text;
