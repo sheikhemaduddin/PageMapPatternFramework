@@ -22,7 +22,6 @@ namespace Royale.Pages
 
 
               }
-
               public Card GetBaseCard()
               {
                  var (category, arena) = GetCardCategory();
@@ -44,9 +43,7 @@ namespace Royale.Pages
        {
             
             public IWebElement CardName => Driver.FindElement(By.CssSelector("[class*='cardName']"));
-
             public IWebElement CardCategory => Driver.FindElement(By.CssSelector(".card__rarity"));
-
             public IWebElement CardRarity => Driver.FindElement(By.CssSelector(".card__epic"));
             
            

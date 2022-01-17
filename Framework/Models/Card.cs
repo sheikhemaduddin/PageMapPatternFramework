@@ -7,7 +7,7 @@ namespace Framework.Models
     { 
        #region  
        //Page Properties
-       public virtual string ID { get; set; }
+       public virtual string Id { get; set; }
        public virtual string Name { get; set; }
        public virtual string Icon { get; set; }
        public virtual int cost { get; set; } = 1;

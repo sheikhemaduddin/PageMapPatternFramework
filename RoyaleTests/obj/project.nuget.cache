@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "r18dHouPAm6QyWhe8q2jzZ2VpHNi/s6PjAB4G33n4FDscWf3yNcB/LDEFGEBZ+2nGQfW3v1hSYIJnbdE0gC34g==",
+  "dgSpecHash": "wMyVHj4JiFCEFo6ChJkGnlcG+V4q4JdBW1DditfMyr0HgNPEz7Eb/sPTJoatBFXAgkyPb9r14U9gflYFkESWAw==",
   "success": true,
   "projectFilePath": "D:\\tau\\scripting-to-framework\\RoyaleTests\\RoyaleTests.csproj",
   "expectedPackageFiles": [
@@ -19,6 +19,7 @@
     "C:\\Users\\emadushe\\.nuget\\packages\\nuget.frameworks\\5.0.0\\nuget.frameworks.5.0.0.nupkg.sha512",
     "C:\\Users\\emadushe\\.nuget\\packages\\nunit\\3.13.1\\nunit.3.13.1.nupkg.sha512",
     "C:\\Users\\emadushe\\.nuget\\packages\\nunit3testadapter\\3.17.0\\nunit3testadapter.3.17.0.nupkg.sha512",
+    "C:\\Users\\emadushe\\.nuget\\packages\\restsharp\\107.1.1\\restsharp.107.1.1.nupkg.sha512",
     "C:\\Users\\emadushe\\.nuget\\packages\\runtime.native.system\\4.3.0\\runtime.native.system.4.3.0.nupkg.sha512",
     "C:\\Users\\emadushe\\.nuget\\packages\\selenium.support\\4.1.0\\selenium.support.4.1.0.nupkg.sha512",
     "C:\\Users\\emadushe\\.nuget\\packages\\selenium.webdriver\\4.1.0\\selenium.webdriver.4.1.0.nupkg.sha512",
@@ -51,6 +52,7 @@
     "C:\\Users\\emadushe\\.nuget\\packages\\system.runtime.interopservices.runtimeinformation\\4.3.0\\system.runtime.interopservices.runtimeinformation.4.3.0.nupkg.sha512",
     "C:\\Users\\emadushe\\.nuget\\packages\\system.text.encoding\\4.3.0\\system.text.encoding.4.3.0.nupkg.sha512",
     "C:\\Users\\emadushe\\.nuget\\packages\\system.text.encoding.extensions\\4.3.0\\system.text.encoding.extensions.4.3.0.nupkg.sha512",
+    "C:\\Users\\emadushe\\.nuget\\packages\\system.text.json\\5.0.0\\system.text.json.5.0.0.nupkg.sha512",
     "C:\\Users\\emadushe\\.nuget\\packages\\system.text.regularexpressions\\4.3.0\\system.text.regularexpressions.4.3.0.nupkg.sha512",
     "C:\\Users\\emadushe\\.nuget\\packages\\system.threading\\4.3.0\\system.threading.4.3.0.nupkg.sha512",
     "C:\\Users\\emadushe\\.nuget\\packages\\system.threading.tasks\\4.3.0\\system.threading.tasks.4.3.0.nupkg.sha512",
