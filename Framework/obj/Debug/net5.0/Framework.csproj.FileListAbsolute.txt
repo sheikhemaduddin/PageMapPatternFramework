@@ -1,0 +1,5 @@
+D:\tau\scripting-to-framework\framework\obj\Debug\net5.0\Framework.csproj.AssemblyReference.cache
+D:\tau\scripting-to-framework\framework\obj\Debug\net5.0\Framework.GeneratedMSBuildEditorConfig.editorconfig
+D:\tau\scripting-to-framework\framework\obj\Debug\net5.0\Framework.AssemblyInfoInputs.cache
+D:\tau\scripting-to-framework\framework\obj\Debug\net5.0\Framework.AssemblyInfo.cs
+D:\tau\scripting-to-framework\framework\obj\Debug\net5.0\Framework.csproj.CoreCompileInputs.cache
