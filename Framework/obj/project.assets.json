@@ -180,11 +180,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "d:\\tau\\scripting-to-framework\\Framework\\Framework.csproj",
+      "projectUniqueName": "D:\\tau\\scripting-to-framework\\framework\\Framework.csproj",
       "projectName": "Framework",
-      "projectPath": "d:\\tau\\scripting-to-framework\\Framework\\Framework.csproj",
+      "projectPath": "D:\\tau\\scripting-to-framework\\framework\\Framework.csproj",
       "packagesPath": "C:\\Users\\emadushe\\.nuget\\packages\\",
-      "outputPath": "d:\\tau\\scripting-to-framework\\Framework\\obj\\",
+      "outputPath": "D:\\tau\\scripting-to-framework\\framework\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft\\Xamarin\\NuGet\\"
@@ -249,7 +249,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.404\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.407\\RuntimeIdentifierGraph.json"
       }
     }
   }
